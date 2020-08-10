@@ -1,4 +1,5 @@
 import React from 'react';
+import './cart-item.css'
 
 export const CardItems = ({ id, name, price, qty, updateQty }) => {
 

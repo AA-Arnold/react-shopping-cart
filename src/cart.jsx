@@ -1,5 +1,6 @@
 import React from 'react';
 import { CardItems } from './cart-items'
+import './cart.css'
 
 export const Cart = ({ initialItems }) => {
 
@@ -18,13 +19,13 @@ export const Cart = ({ initialItems }) => {
     ), 0)
     return (
         <div className='cart'>
-            <h1>This is a cart</h1>
+            <h1 className='cart-title'>Shopping Chart</h1>
             <div className="cart-items">
                 {
                     items.map(item => <CardItems key={item.id} updateQty={updateQty} {...item} />)
                 }
             </div>
-            <h3>Grand Total : ${grandTotal}</h3>
+            <h3 className="cart-total">Grand Total : ${grandTotal}</h3>
         </div>
     )
 }
