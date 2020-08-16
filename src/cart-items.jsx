@@ -20,7 +20,7 @@ export const CardItems = ({ id, name, price, qty, updateQty }) => {
                 {qty}
                 <button onClick={addOne}>+</button>
             </div>
-            <div>Total ${qty * price}</div>
+            <div>Total ${(qty * price).toFixed(3)}</div>
         </div>
     )
 }

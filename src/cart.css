@@ -16,3 +16,9 @@
     font-weight: 400;
     padding-bottom: 1em;
 }
+
+.cart-total{
+    text-align: right;
+    margin-top: 50px;
+  
+}

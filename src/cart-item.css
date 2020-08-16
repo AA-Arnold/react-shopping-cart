@@ -11,14 +11,14 @@
     margin-bottom:3em;
 }
 
-/* .Card-items button{
+.Card-items button{
     width: 30px;
     height: 30px;
     background-color: #e1e8ee;
     border-radius: 6px;
-    margin: 0 30px;
+    margin: 0 20px;
     border: none;
-} */
+}
 
 .Card-items button:disabled{
     background-color: #f8f9fa;

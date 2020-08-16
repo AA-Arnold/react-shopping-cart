@@ -4,7 +4,11 @@ import './cart.css'
 
 export const Cart = ({ initialItems }) => {
 
-    const [items, setItems] = React.useState(initialItems)
+    const storageItems = JSON.parse(window.localStorage.getItem('items'))
+    const [items, setItems] = React.useState(storageItems || initialItems)
+    React.useEffect(() => {
+        window.localStorage.setItem('items', JSON.stringify(items))
+    }, [items])
 
     const updateQty = (id, newQty) => {
         const newItems = items.map(item => {
@@ -16,7 +20,7 @@ export const Cart = ({ initialItems }) => {
 
     const grandTotal = items.reduce((total, item) => (
         total + item.qty * item.price
-    ), 0)
+    ), 0).toFixed(3)
     return (
         <div className='cart'>
             <h1 className='cart-title'>Shopping Chart</h1>
